@@ -1,5 +1,3 @@
-package com.woowahan;
-
 import static java.lang.System.out;
 import static java.util.Arrays.*;
 

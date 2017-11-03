@@ -1,5 +1,3 @@
-package com.woowahan;
-
 import static java.lang.System.out;
 import static java.util.Arrays.*;
 
@@ -18,12 +16,12 @@ public class NineDwarfs
         int sum = stream(heights).sum();
         int sumOfFakes = sum - TOTAL_WEIGHT;
 
-        for(int weightOfSuspectA: sorted)
+        for(int heightOfSuspectA: sorted)
         {
-            int weightOfSuspectB = sumOfFakes - weightOfSuspectA;
+            int heightOfSuspectB = sumOfFakes - heightOfSuspectA;
 
-            if(binarySearch(sorted, weightOfSuspectB) >= 0)
-                return stream(sorted).filter(w -> w != weightOfSuspectA && w != weightOfSuspectB).toArray();
+            if(binarySearch(sorted, heightOfSuspectB) >= 0)
+                return stream(sorted).filter(w -> w != heightOfSuspectA && w != heightOfSuspectB).toArray();
         }
         return new int[0];
     }
